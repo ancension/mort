@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hero Section</title>
+    <link rel="stylesheet" href="css/header.css"><!--header-->
+    <link rel="stylesheet" href="css/profile.css"><!--profile-->
+    <link rel="stylesheet" href="css/mission-vision.css"><!--mission-vision-->
+    <link rel="stylesheet" href="css/location.css"><!--location-->
+    <link rel="stylesheet" href="css/services.css"><!--services-->
+    <link rel="stylesheet" href="css/team.css"><!--team-->
+    <link rel="stylesheet" href="css/footer.css"><!--footer-->
+    <link rel="stylesheet" href="css/chatbot.css"><!--chatbot-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Rubik+Lines&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <nav class="main-nav" id="navbar">
+        <a href="#home" class="logo-container">
+            <img src="assets/logo.svg" alt="Rizz Realty Logo" class="logo" />
+            <h1 class="logo-text">RIZZ REALTY</h1>
+        </a>
+
+
+        <ul>
+            <li><a href="#profile">Profile</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+            <li><a href="#services">Services</a></li>
+        <li><a href="#team">Our Team</a></li>
+        </ul>
+
+        <div style="z-index: 50000;" class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div style="z-index: 50000;" class="mobile-menu" id="mobileMenu">
+        <a href="#profile">Profile</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#services">Services</a>
+        <a href="#team">Our Team</a>
+    </div>
+    <div id="home" class="hero">
+        <div class="hero-background"><img src="assets/background.png" alt="hero"></div>
+        <h6>CONTRACTOR • REALTOR • BROKER • ENGINEER • MASTER PLANNER</h6>
+        <h1 id="main-title-Line1">RIZZ REALTY,</h1>
+        <h1 id="main-title-Line2">BROKERAGE &</h1>
+        <h1 id="main-title-Line3">CONSTRUCTION</h1>
+        <div class="walk">
+            <h4 id="walk1">We</h4>
+            <h2 id="walk2">Walk</h2>
+            <h4 id="walk3">The</h4>
+            <h2 id="walk4">Talk</h2>
+        </div>
+    </div>
+
+        <section id="profile" class="profile">
+        <div class="crosshatch-bg" id="pattern-background"></div>
+            <div class="profile-container">
+                <div class="profile-card">
+                        <img src="assets/company.svg" class="icon-element" alt="company icon">  
+                        <h2 class="profile-heading">Company Profile</h2>
+                        <p id="paragraph1">Rizz Realty, Brokerage, & Construction is a dynamic, multi-service company based in Dumaguete City and Siquijor, dedicated to shaping communities through trusted real estate services and quality construction.</p>
+                        <p id="paragraph2">We specialize in real estate development, property brokerage, and residential and commercial construction, offering a seamless experience for buyers, sellers, and investors alike. Whether its helping clients find their dream home, managing property transactions, or building modern, sustainable spaces. Rizz delivers with integrity, reliability, and local expertise.</p>
+                    <button onclick="toggleParagraph()" class="toggle-btn">Show More</button>
+                </div>
+            </div>
+        </section>   
+        <section class="missionvision">
+            <div class="mission-vision-container">
+                <div class="mission">
+                    <img src="assets/mission.svg" alt="mission" class="icon-element">
+                    <h2>Mission</h2>
+                    <p>To Develop &  Build in attunement with nature for sustainable living.</p>
+                </div>
+                <div class="vision">
+                    <img src="assets/vision.svg" alt="vision" class="icon-element">
+                    <h2>Vision</h2>
+                    <p>Building trust with Quality service.</p>
+                </div>
+            </div>
+        </section>
+
+<section id="contact" class="location">
+  <div class="location-container">
+    <div class="location-left">
+      <!-- <div class="map-toggle-buttons">
+        <button onclick="switchMap('dumaguete')" id="dumagueteButton">Dumaguete</button>
+        <button onclick="switchMap('siquijor')" id="siquijorButton">Siquijor</button>
+      </div> -->
+      <div id="map" style="height: 400px; width: 100%; border-radius: 13px;"></div>
+    </div>
+    <div class="location-right">
+      <div class="address-header-container">
+        <div class="address-header-container">
+            <button onclick="toggleDumaguete()" id="dumagueteTab" class="dumaguete-container"><h3>Dumaguete City</h3></button>
+            <button onclick="toggleSiquijor()" id="siquijorTab" class="siquijor-container"><h3>Siquijor</h3></button>
+        </div>
+      </div>
+      <div class="address-container">
+        <div id="Dumaguete" class="address-info-dumaguete">
+          <h4>RIZZ DEVELOPMENT DUMAGUETE</h4>
+          <p style="margin: 1.8rem 0 0.5rem 0">Dumaguete City, Negros Oriental</p>
+          <p>123-456-7890</p>
+          <p>email@email.com</p>
+          <div class="contact-buttons">
+            <a href="" class="contact-btn call-btn"><img src="assets/call.svg" style="width: 1rem; height: 1rem;"> Call</a>
+            <a href="" class="contact-btn email-btn"><img src="assets/mail.svg"> Email</a>
+          </div>
+        </div>
+        <div id="Siquijor" class="address-info-siquijor" style="display: none;">
+          <h4>RIZZ DEVELOPMENT SIQUIJOR</h4>
+          <p style="margin: 1.8rem 0 0.5rem 0">Lala-o, San Juan, Siquijor</p>
+          <p>123-456-7890</p>
+          <p>email@email.com</p>
+          <div class="contact-buttons">
+            <a href="" class="contact-btn call-btn"><img src="assets/call.svg" style="width: 1rem; height: 1rem;"> Call</a>
+            <a href="" class="contact-btn email-btn"><img src="assets/mail.svg"> Email</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="services" class="services">
+        <div class="services-container">
+            <div class="image-container-top">
+            </div>
+            <div class="image-container-bottom"></div>
+            <div class="stairs">
+                <div id="S0" class="external-services-container service-header">
+                    <div class="internal css container">
+                        <h2>Services</h2>
+                    </div>
+                </div>
+                <div id="S1" class="external-services-container service-header">
+                    <div class="internal-css-container">
+                        <p>Land preparations & Surveying</p>
+                    </div>
+                </div>
+                <div id="S2" class="external-services-container service-header">
+                    <div class="internal-css-container">
+                        <p>Develop & Construct/Build</p>
+                    </div>
+                </div>
+                <div id="S3" class="external-services-container service-header">
+                    <div class="internal-css-container">
+                        <p>Documentation & Application/Registration of Title</p>
+                    </div>
+                </div>
+                <div id="S4" class="external-services-container service-header">
+                    <div class="internal-css-container">
+                        <p>Title Transfer, Consolidation of Title. Buy/Sell & Property Management</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="team-container">
+            <h2>Our Team</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <img src="assets/1.jpg" alt="Team Member 1">
+                    <h3>John Doe</h3>
+                    <p>CEO & Founder</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/2.jpg" alt="Team Member 2">
+                    <h3>Jane Smith</h3>
+                    <p>Project Manager</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/3.jpg" alt="Team Member 3">
+                    <h3>Emily Johnson</h3>
+                    <p>Lead Architect</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/4.jpg" alt="Team Member 4">
+                    <h3>Michael Brown</h3>
+                    <p>Construction Engineer</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/5.jpg" alt="Team Member 4">
+                    <h3>Hanee Wiwiwi</h3>
+                    <p>Snack Specialist</p>
+                </div>
+                <div class="team-member">
+                    <img src="assets/6.jpg" alt="Team Member 4">
+                    <h3>Sharif Abdulhamid</h3>
+                    <p>Systems Engineer</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-badges">
+            <div class="badge-placeholder" title="Professional Regulation Commission">
+                <img src="assets/badge_RS.png" alt="PRC Seal">
+            </div>
+            <div class="badge-placeholder" title="Real Estate Broker License">
+                <img src="assets/awesome-3d-gold-badge-with-blue-ribbon-vector-9037600.jpg" alt="Broker Seal" margin-top="30px">
+            </div>
+            <div class="badge-placeholder" title="Department of Human Settlements and Urban Development">
+                <img src="assets/RS2.png" alt="DHSUD Seal">
+            </div>
+        </div>
+        <div class="copyright">
+            © c/o Morta for Portfolio Purposes 2025
+        </div>
+    </div>
+</footer>
+
+    <button class="chatbot-btn" aria-label="Need Help?" onclick="toggleChatbot()">
+        <div class="chatbot-label">Need Help?</div>
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" style="vertical-align:middle;">
+            <circle cx="12" cy="12" r="12" fill="#fff" opacity="0.15"/>
+            <path d="M12 17v.01M12 7a3 3 0 0 1 3 3c0 1.5-1.5 2-2.25 2.5S11 13 11 14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+    <!-- Chatbox -->
+    <div id="chatbox" class="chatbox">
+        <div class="chatbox-header" id="chatboxHeader">
+            <div class="ai-help-title">Chatbot</div>
+            <button class="chatbox-close" aria-label="Close" onclick="toggleChatbot()" id="closeChatbot">
+                <svg class="chatbox-svg-close" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path d="M6 18L18 6M6 6l12 12" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+        </div>
+        <div class="chatbox-content" id="chatboxBody">
+            <div class="chat-bubble bot">
+                <span class="bot-name">Kort:</span>
+                Hello there! I'm Kort, your trusty virtual assistant.<br>How may I help you today?
+            </div>
+            <div class="user-options">
+
+            </div>
+        </div>
+    </div>
+<!-- CHATBOT ENDS HERE -->
+</body>
+<script src="chatbot.js"></script>
+<script>
+let map;
+let mapMarker;
+
+const locations = {
+  dumaguete: [9.3223662, 123.2651228],
+  siquijor: [9.1691655, 123.4901946]
+};
+
+function initMap() {
+  map = L.map("map").setView(locations.dumaguete, 17);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors"
+  }).addTo(map);
+  mapMarker = L.marker(locations.dumaguete).addTo(map);
+}
+
+function switchMap(locationKey) {
+  const coords = locations[locationKey];
+  if (coords) {
+    map.setView(coords, 17);
+    mapMarker.setLatLng(coords);
+  }
+}
+
+function toggleDumaguete() {
+  document.getElementById("Dumaguete").style.display = "flex";
+  document.getElementById("Siquijor").style.display = "none";
+
+  document.getElementById("dumagueteTab").style.backgroundImage = "linear-gradient(145deg, #ac8211 0%, #2a2a2a 100%)";
+  document.getElementById("dumagueteTab").style.backgroundColor = "#ac8211";
+  document.getElementById("siquijorTab").style.backgroundImage = "none";
+  document.getElementById("siquijorTab").style.backgroundColor = "#2a2a2a";
+  map.setView(locations.dumaguete, 17);
+  mapMarker.setLatLng(locations.dumaguete);
+}
+
+function toggleSiquijor() {
+  document.getElementById("Dumaguete").style.display = "none";
+  document.getElementById("Siquijor").style.display = "flex";
+  document.getElementById("dumagueteTab").style.backgroundImage = "none";
+  document.getElementById("dumagueteTab").style.backgroundColor = "#2a2a2a";
+  document.getElementById("siquijorTab").style.backgroundImage = "linear-gradient(145deg, #ac8211 0%, #2a2a2a 100%)";
+  document.getElementById("siquijorTab").style.backgroundColor = "#ac8211";
+
+  map.setView(locations.siquijor, 17);
+  mapMarker.setLatLng(locations.siquijor);
+}
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  initMap();
+});
+
+const bg = document.getElementById("pattern-background");
+
+ window.addEventListener("scroll", () => {
+    const scrollOffset = window.scrollY;
+    const parallaxOffset = scrollOffset *0.02;
+    bg.style.transform = `translateY(-${parallaxOffset}px)`;
+    bg.style.transform = 'rotate(45deg) translateY(-50%)';
+  });
+
+function toggleParagraph() {
+    const paragraph2 = document.getElementById('paragraph2');
+    const toggleBtn = document.querySelector('.toggle-btn');
+    
+    requestAnimationFrame(() => {
+        paragraph2.classList.toggle('visible');
+        toggleBtn.textContent = paragraph2.classList.contains('visible') ? 'Show Less' : 'Show More';
+    });
+}
+
+const images = {
+  survey: ["assets/survey_1.jpg", "assets/survey_2.jpg"],
+  build: ["assets/build_1.jpg", "assets/build_2.jpg"],
+  document: ["assets/document_1.jpg", "assets/document_2.jpg"],
+  management: ["assets/management_1.jpg", "assets/management_2.jpg"]
+};
+
+const topContainer = document.querySelector(".image-container-top");
+const bottomContainer = document.querySelector(".image-container-bottom");
+
+const imageKeys = ["survey", "build", "document", "management"];
+const elementMap = {
+  survey: document.getElementById("S1"),
+  build: document.getElementById("S2"),
+  document: document.getElementById("S3"),
+  management: document.getElementById("S4")
+};
+
+let currentIndex = 0;
+let imageInterval = null;
+
+Object.values(images).flat().forEach(src => {
+  const img = new Image();
+  img.src = src;
+});
+
+function setActive(key) {
+  Object.entries(elementMap).forEach(([k, el]) => {
+    if (el) el.classList.toggle("active", k === key);
+  });
+}
+
+function updateImagesByKey(key) {
+  topContainer.style.backgroundImage = `url('${images[key][0]}')`;
+  bottomContainer.style.backgroundImage = `url('${images[key][1]}')`;
+  setActive(key);
+}
+
+function cycleImages() {
+  const key = imageKeys[currentIndex];
+  updateImagesByKey(key);
+  currentIndex = (currentIndex + 1) % imageKeys.length;
+}
+
+function startImageCycle() {
+  cycleImages();
+  imageInterval = setInterval(cycleImages, 5000);
+}
+
+function stopImageCycle() {
+  clearInterval(imageInterval);
+}
+
+function setHoverEffect(id, key) {
+  const element = document.getElementById(id);
+  if (element) {
+    element.addEventListener("mouseenter", () => {
+      stopImageCycle();
+      updateImagesByKey(key);
+      currentIndex = imageKeys.indexOf(key);
+    });
+
+    element.addEventListener("mouseleave", () => {
+      startImageCycle();
+    });
+  }
+}
+
+setHoverEffect("S1", "survey");
+setHoverEffect("S2", "build");
+setHoverEffect("S3", "document");
+setHoverEffect("S4", "management");
+
+startImageCycle();
+
+  function initStreetView() {
+    const panorama = new google.maps.StreetViewPanorama(
+      document.getElementById("street-view"),
+      {
+        position: { lat: 9.3223662, lng: 123.2651228 },
+        pov: { heading: 288.46, pitch: 70.14 },
+        zoom: 1
+      }
+    );
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    let lastScroll = window.pageYOffset;
+    const navbar = document.getElementById("navbar");
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const mainNav = document.querySelector('.main-nav');
+
+    // Scroll Handler
+    window.addEventListener("scroll", () => {
+        const currentScroll = window.pageYOffset;
+        if (currentScroll > lastScroll && currentScroll > 50) {
+            mainNav.classList.add("hidden");
+            mobileMenu.classList.remove("show");
+            hamburger.classList.remove("active");
+        } else {
+            mainNav.classList.remove("hidden");
+        }
+        lastScroll = currentScroll;
+    });
+
+    // Hamburger Click Handler
+    hamburger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        hamburger.classList.toggle("active");
+        mobileMenu.classList.toggle("show");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!mobileMenu.contains(e.target) && !hamburger.contains(e.target)) {
+            mobileMenu.classList.remove("show");
+            hamburger.classList.remove("active");
+        }
+    });
+
+    // Close menu when clicking a link
+    mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenu.classList.remove("show");
+            hamburger.classList.remove("active");
+        });
+    });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      window.scrollTo({
+        top: target.offsetTop - 30,
+        behavior: "smooth"
+      });
+    }
+  });
+});
+</script>
+</html>

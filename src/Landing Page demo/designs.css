@@ -1,0 +1,86 @@
+/* No chatbot-related CSS present in this file. Only SVG design styles remain. */
+/* Header SVG lines */
+.header-svg-lines {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 60%; /* or your preferred value */
+    z-index: 0;
+    pointer-events: none;
+    line-height: 0;
+    height: 48px;
+    overflow: hidden;
+}
+
+/* Featured SVG background */
+.featured-svg-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    z-index: 0;
+    pointer-events: none;
+    line-height: 0;
+}
+.featured-svg-bg svg path {
+    stroke-width: 4px !important;
+}
+.featured > *:not(.featured-svg-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+/* Contact SVG background */
+.contact-svg-bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 110px;
+    z-index: 0;
+    pointer-events: none;
+    line-height: 0;
+}
+.Contact {
+    position: relative;
+    overflow: hidden;
+}
+.Contact > *:not(.contact-svg-bg) {
+    position: relative;
+    z-index: 1;
+}
+
+/* About Us SVG corner decoration */
+.about-us {
+    position: relative;
+    overflow: visible;
+}
+.about-us > .about-svg-corner {
+    position: absolute;
+    right: 18px;
+    bottom: -10px;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 1;
+    filter: drop-shadow(0 2px 12px #daa06d55);
+}
+
+/* Why Us SVG corner decoration */
+.why-us {
+    position: relative;
+    overflow: visible;
+}
+.why-us > .why-svg-corner {
+    position: absolute;
+    right: 18px;
+    bottom: -10px;
+    width: 80px;
+    height: 80px;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 1;
+    filter: drop-shadow(0 2px 12px #8d8f6a55);
+}

@@ -1,0 +1,5 @@
+Hello,
+
+Download and unzip these files into one folder.
+
+After unzipping, open the html file named "indexPortfolio.html"

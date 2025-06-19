@@ -1,0 +1,217 @@
+.location {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, #1c1c1c 0%, #242424 100%);
+}
+
+.location-pin{
+    z-index:2000;
+    padding: 1rem;
+    border-radius: 50%;
+    background: rgb(190, 29, 29);
+    box-shadow: 0 0 10px rgba(233, 185, 52, 0.2);
+    position: absolute;
+    top: 0;            
+    right: 0;          
+    transform: translate(10%, -50%) rotate(30deg);
+}
+
+.location-container {
+    margin: 5rem auto 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 80vw;
+    border-radius: 13px;
+}
+
+.location-left, .location-right {
+    position:relative;
+    flex: 1;
+    background-color: white;
+    height: 100%;
+    min-width: 300px;
+    min-height: 250px;
+    margin: 0;
+    border-radius: 13px;
+}
+
+.location-left {
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.location-right {
+    align-items: center;
+    border-radius: 13px;
+    background: linear-gradient(145deg, #242424 0%, #2a2a2a 100%);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(233, 185, 52, 0.1);
+}
+
+.address-header-container {
+    background-color: transparent;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -5px
+}
+
+.dumaguete-container, .siquijor-container {
+    flex: 1;
+    z-index: 1000;
+    color: #e9b934;
+    font-size: small;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 50%!important;
+    
+    height: 100%;
+    padding: 0.8rem;
+    align-items: end;
+    border-radius: 10px 10px 5px 5px;
+    background: linear-gradient(145deg, #242424 0%, #2a2a2a 100%);
+}
+
+.dumaguete-container.active, .siquijor-container.active {
+    background: linear-gradient(145deg, #ac8211 0%, #2a2a2a 100%);
+}
+
+.dumaguete-container:hover, .siquijor-container:hover {
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(233, 185, 52, 0.3);
+    background: linear-gradient(145deg, #2a2a2a 0%, #333333 100%);
+}
+
+.address-info-dumaguete, .address-info-siquijor {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 13px 13px;
+    background: linear-gradient(145deg, #242424 0%, #2a2a2a 100%);
+    color: rgba(255, 255, 255, 0.9);
+    box-shadow: inset 0 0 30px rgba(233, 185, 52, 0.05);
+    border: 1px solid rgba(233, 185, 52, 0.1);
+}
+
+.address-info-dumaguete h4, .address-info-siquijor h4 {
+    color: #e9b934;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.address-info-dumaguete p, .address-info-siquijor p {
+    color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+
+.contact-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.contact-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(233, 185, 52, 0.2);
+    min-width: 100px;
+}
+
+.contact-btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.call-btn img {
+    filter: brightness(0) saturate(100%);
+}
+
+.email-btn img {
+    filter: invert(76%) sepia(59%) saturate(391%) hue-rotate(355deg) brightness(89%) contrast(91%);
+}
+
+.call-btn {
+    background: linear-gradient(135deg, #e9b934, #ffd700);
+    color: #242424;
+}
+
+.email-btn {
+    background: linear-gradient(145deg, #242424 0%, #2a2a2a 100%);
+    color: #e9b934;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(233, 185, 52, 0.2);
+}
+
+.call-btn:hover {
+    background: linear-gradient(135deg, #ffd700, #e9b934);
+}
+
+.email-btn:hover {
+    background: linear-gradient(145deg, #2a2a2a 0%, #333333 100%);
+    color: #ffd700;
+}
+
+@media screen and (max-width: 1023px) {
+    .location-container {
+        margin: 1rem 1rem;
+        flex-direction: column;
+        width: 90vw;
+        gap: 0.2rem;
+    }
+
+    .location-left, .location-right {
+        min-width: 100%;
+        height: 100%;
+    }
+
+  
+}
+
+@media screen and (max-width: 600px) {
+    .location-container {
+        width: 95vw;
+        flex-direction: column;
+        max-width: 400px;
+    }
+
+    .location-left, .location-right {
+        min-width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .contact-buttons {
+        flex-direction: column;
+        gap: 0.8rem;
+        width: 100%;
+    }
+
+    .contact-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}

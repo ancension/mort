@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="designs.css">
+    <link rel="stylesheet" href="chatbot.css">
+    <link rel="icon" type="image/png" href="resources/Logo 1.png">
+</head>
+<body>
+    <header>
+      <img src="resources/Logo 1.png" alt="Logo" class="site-logo">
+      <h1>Sample Project</h1>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#featured">Featured</a></li>
+          <li><a href="#about-us">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="hamburger" aria-label="Open navigation" onclick="toggleMobileNav()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="header-svg-lines">
+        <svg width="100%" height="48" viewBox="0 0 1440 48" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0 40 Q360 0 720 40 T1440 40" stroke="#DAA06D" stroke-width="3" fill="none" opacity="0.18"/>
+            <path d="M0 32 Q480 8 960 32 T1440 32" stroke="#8D8F6A" stroke-width="2" fill="none" opacity="0.22"/>
+            <path d="M0 46 Q720 24 1440 46" stroke="#3B3C4A" stroke-width="1.5" fill="none" opacity="0.12"/>
+        </svg>
+    </header>
+    <div class="featured" id="featured">
+        <!-- Decorative SVG background lines/shapes -->
+        <div class="featured-svg-bg">
+            <svg width="100%" height="80" viewBox="0 0 900 80" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <path d="M0 60 Q150 10 300 60 T600 60 T900 60" stroke="#DAA06D" stroke-width="3" fill="none" opacity="0.13"/>
+                <path d="M0 75 Q225 40 450 75 T900 75" stroke="#8D8F6A" stroke-width="2" fill="none" opacity="0.18"/>
+                <circle cx="60" cy="30" r="14" fill="#DAA06D" opacity="0.10"/>
+                <circle cx="850" cy="55" r="10" fill="#8D8F6A" opacity="0.13"/>
+                <ellipse cx="450" cy="20" rx="28" ry="8" fill="#DAA06D" opacity="0.08"/>
+            </svg>
+        </div>
+        <h2>Featured</h2>
+        <div class="carousel-container" id="carousel-container">
+            <button class="carousel-btn left" aria-label="Previous">&#9664;</button>
+            <div class="carousel-track">
+                <div class="carousel-card">
+                    <img src="resources/1.jpg" alt="Card 1">
+                    <h3>Card Title 1</h3>
+                    <p>Short info about card 1.</p>
+                </div>
+                <div class="carousel-card">
+                    <img src="resources/2.jpg" alt="Card 2">
+                    <h3>Card Title 2</h3>
+                    <p>Short info about card 2.</p>
+                </div>
+                <div class="carousel-card">
+                    <img src="resources/3.jpg" alt="Card 3">
+                    <h3>Card Title 3</h3>
+                    <p>Short info about card 3.</p>
+                </div>
+                <div class="carousel-card">
+                    <img src="resources/4.jpg" alt="Card 4">
+                    <h3>Card Title 4</h3>
+                    <p>Short info about card 4.</p>
+                </div>
+                <div class="carousel-card">
+                    <img src="resources/5.jpg" alt="Card 5">
+                    <h3>Card Title 5</h3>
+                    <p>Short info about card 5.</p>
+                </div>
+                <div class="carousel-card">
+                    <img src="resources/6.jpg" alt="Card 6">
+                    <h3>Card Title 6</h3>
+                    <p>Short info about card 6.</p>
+                </div>
+            </div>
+            <button class="carousel-btn right" aria-label="Next">&#9654;</button>
+        </div>
+        <div class="cards-grid" id="cards-grid" style="display:none;">
+            <div class="carousel-card">
+                <img src="resources/1.jpg" alt="Card 1">
+                <h3>Card Title 1</h3>
+                <p>Short info about card 1.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="resources/2.jpg" alt="Card 2">
+                <h3>Card Title 2</h3>
+                <p>Short info about card 2.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="resources/3.jpg" alt="Card 3">
+                <h3>Card Title 3</h3>
+                <p>Short info about card 3.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="resources/4.jpg" alt="Card 4">
+                <h3>Card Title 4</h3>
+                <p>Short info about card 4.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="resources/5.jpg" alt="Card 5">
+                <h3>Card Title 5</h3>
+                <p>Short info about card 5.</p>
+            </div>
+            <div class="carousel-card">
+                <img src="resources/6.jpg" alt="Card 6">
+                <h3>Card Title 6</h3>
+                <p>Short info about card 6.</p>
+            </div>
+        </div>
+        <button class="show-more-btn" id="show-more-btn" type="button">Show More</button>
+    </div>
+    <div class="info-wide">
+        <div class="about-why-wrapper">
+            <div class="about-us" id="about-us">
+                <div class="icon-circle">
+                    <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#DAA06D"/><path d="M16 17c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v1a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-1c0-2.66-5.33-4-8-4z" fill="#fff"/></svg>
+                </div>
+                <h2>About Us</h2>
+                <p>We are a company that values excellence and innovation.</p>
+                <!-- About Us SVG -->
+                <div class="about-svg-corner">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <ellipse cx="60" cy="60" rx="18" ry="12" fill="#DAA06D" opacity="0.35"/>
+                        <circle cx="68" cy="68" r="8" fill="#DAA06D" opacity="0.55"/>
+                        <path d="M0 80 Q40 40 80 80" stroke="#DAA06D" stroke-width="5" fill="none" opacity="0.55"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="why-us" id="why-us">
+                <div class="icon-circle">
+                    <svg width="32" height="32" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="16" r="16" fill="#8D8F6A"/><path d="M16 9a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm.75 2.5v2.25l1.75 1.75-1.06 1.06-2-2A.75.75 0 0 1 15.25 14V11.5h1.5z" fill="#fff"/></svg>
+                </div>
+                <h2>Why Us?</h2>
+                <p>We provide the best services in the industry.</p>
+                <!-- Why Us SVG -->
+                <div class="why-svg-corner">
+                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                        <ellipse cx="60" cy="60" rx="18" ry="12" fill="#8D8F6A" opacity="0.35"/>
+                        <circle cx="68" cy="68" r="8" fill="#8D8F6A" opacity="0.55"/>
+                        <path d="M0 80 Q40 40 80 80" stroke="#8D8F6A" stroke-width="5" fill="none" opacity="0.55"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="services" class="Services">
+        <h2>Services</h2>
+        <p>This is the services section of the page.</p>
+        <ul>
+            <li>Service 1</li>
+            <li>Service 2</li>
+            <li>Service 3</li>
+            <li>Service 4</li>
+            <li>Service 5</li>
+            <li>Service 6</li>
+        </ul>
+    </div>
+    <div class="Contact" id="contact">
+        <div class="contact-svg-bg">
+            <svg width="100%" height="110" viewBox="0 0 900 110" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+                <defs>
+                    <radialGradient id="contact-glow" cx="50%" cy="50%" r="70%">
+                        <stop offset="0%" stop-color="#DAA06D" stop-opacity="0.22"/>
+                        <stop offset="100%" stop-color="#fff" stop-opacity="0"/>
+                    </radialGradient>
+                </defs>
+                <ellipse cx="450" cy="55" rx="370" ry="32" fill="url(#contact-glow)" />
+                <path d="M0 90 Q200 20 450 90 T900 90" stroke="#DAA06D" stroke-width="6" fill="none" opacity="0.22"/>
+                <path d="M0 105 Q300 60 900 105" stroke="#8D8F6A" stroke-width="4" fill="none" opacity="0.18"/>
+                <circle cx="80" cy="50" r="22" fill="#DAA06D" opacity="0.13"/>
+                <circle cx="820" cy="80" r="16" fill="#8D8F6A" opacity="0.13"/>
+                <ellipse cx="450" cy="30" rx="50" ry="13" fill="#DAA06D" opacity="0.09"/>
+            </svg>
+        </div>
+        <h2>Contact Us</h2>
+        <p>You can reach us </p>
+        <div class="contact-icons">
+            <a class="contact-btn" aria-label="Facebook" target="_blank" rel="noopener">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#1877F3"/><path d="M21.333 16h-3.2v8h-3.2v-8h-1.6v-2.667h1.6v-1.6c0-2.133 1.067-3.2 3.2-3.2h2.133V11.2h-1.6c-.533 0-.8.267-.8.8v1.333h2.4L21.333 16z" fill="#fff"/></svg>
+            </a>
+            <a  class="contact-btn" aria-label="Twitter/X" target="_blank" rel="noopener">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#222"/><path d="M20.8 10.667h2.133l-4.667 5.333 5.333 6.667h-4l-3.2-4-3.2 4h-2.133l4.8-5.333-5.067-6.667h4l2.933 4 2.933-4zm-1.067 9.333h1.067l-3.2-4-3.2 4h1.067l2.133-2.667 2.133 2.667z" fill="#fff"/></svg>
+            </a>
+            <a class="contact-btn" aria-label="Viber" target="_blank" rel="noopener">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#7360F2"/><path d="M21.2 19.6c-.267-.133-1.6-.8-1.867-.933-.267-.133-.467-.133-.667.133-.267.267-.533.533-.8.667-.133.133-.267.133-.533 0-1.6-.8-2.8-2.133-3.6-3.6-.133-.133-.133-.267 0-.533.133-.267.267-.533.4-.8.133-.267.133-.533 0-.8-.133-.267-.8-1.6-.933-1.867-.133-.267-.267-.267-.533-.267h-.8c-.267 0-.533.133-.667.267-.8.8-1.067 2.133-.267 3.467 1.067 2.133 3.067 4.133 5.2 5.2 1.333.8 2.667.533 3.467-.267.133-.133.267-.4.267-.667v-.8c0-.267 0-.4-.267-.533z" fill="#fff"/></svg>
+            </a>
+            <a class="contact-btn" aria-label="Email">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#EA4335"/><path d="M24 11.333v9.334c0 .733-.6 1.333-1.333 1.333H9.333A1.333 1.333 0 0 1 8 20.667v-9.334c0-.733.6-1.333 1.333-1.333h13.334c.733 0 1.333.6 1.333 1.333zm-1.333 0-6.667 5-6.667-5v9.334h13.334v-9.334zm-6.667 3.333 6.667-5H9.333l6.667 5z" fill="#fff"/></svg>
+            </a>
+            <a class="contact-btn" aria-label="Phone">
+                <svg width="28" height="28" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="#43C463"/><path d="M21.6 19.2c-.533 0-1.067-.067-1.6-.2-.267-.067-.533 0-.733.133l-1.2.8a9.6 9.6 0 0 1-4.267-4.267l.8-1.2c.133-.2.2-.467.133-.733-.133-.533-.2-1.067-.2-1.6 0-.4-.333-.8-.8-.8h-2c-.4 0-.8.333-.8.8A10.667 10.667 0 0 0 16 23.2c.4 0 .8-.333.8-.8v-2c0-.467-.4-.8-.8-.8z" fill="#fff"/></svg>
+            </a>
+        </div>
+    </div>
+    <button class="ai-help-btn" aria-label="Need Help?" onclick="toggleAIHelpBox()">
+        <svg width="24" height="24" fill="none" viewBox="0 0 24 24" style="vertical-align:middle;">
+            <circle cx="12" cy="12" r="12" fill="#fff" opacity="0.15"/>
+            <path d="M12 17v.01M12 7a3 3 0 0 1 3 3c0 1.5-1.5 2-2.25 2.5S11 13 11 14" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Need Help?
+    </button>
+    <div id="ai-help-box" class="ai-help-box" style="display:none;">
+        <div class="ai-help-header">
+            <span>AI Assistant</span>
+            <button class="ai-help-close" onclick="toggleAIHelpBox()" aria-label="Close">&times;</button>
+        </div>
+        <div class="ai-help-body" id="ai-help-body">
+            <div class="chat-message bot">
+                <div>
+                    <span class="bot-name">Bot:</span>
+                    <span class="bot-bubble">This is a mock chatbox.</span>
+                </div>
+            </div>
+        </div>
+        <form class="ai-help-input" onsubmit="handleAIHelpSend(event);">
+            <input id="ai-help-input-field" type="text" placeholder="Type your message..." autocomplete="off" />
+            <button type="submit" aria-label="Send">Send</button>
+            <div id="ai-help-tooltip" class="ai-help-tooltip" style="display:none;">Type your message here</div>
+        </form>
+    </div>
+    <footer>
+        <p>Morta</p>
+    </footer>
+    <script>
+    // Navigation hamburger and responsive nav
+    function toggleMobileNav() {
+        const nav = document.querySelector('.main-nav');
+        nav.classList.toggle('mobile-active');
+    }
+    function handleResize() {
+        const nav = document.querySelector('.main-nav');
+        const hamburger = document.querySelector('.hamburger');
+        if(window.innerWidth <= 600) {
+            hamburger.style.display = 'flex';
+            nav.classList.remove('mobile-active');
+        } else {
+            hamburger.style.display = 'none';
+            nav.classList.remove('mobile-active');
+        }
+    }
+    window.addEventListener('resize', handleResize);
+    window.addEventListener('DOMContentLoaded', handleResize);
+
+    // Header shrink on scroll
+    window.addEventListener('scroll', function() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+            header.classList.add('shrink');
+        } else {
+            header.classList.remove('shrink');
+        }
+    });
+
+    // Carousel logic
+    const track = document.querySelector('.carousel-track');
+    const btnLeft = document.querySelector('.carousel-btn.left');
+    const btnRight = document.querySelector('.carousel-btn.right');
+    const showMoreBtn = document.getElementById('show-more-btn');
+    const carouselContainer = document.getElementById('carousel-container');
+    const cardsGrid = document.getElementById('cards-grid');
+    let current = 0;
+
+    const carouselCards = Array.from(track.children);
+
+    function updateCarousel() {
+        track.style.transform = `translateX(-${current * 100}%)`;
+    }
+
+    btnLeft.onclick = function() {
+        current = (current - 1 + carouselCards.length) % carouselCards.length;
+        updateCarousel();
+    };
+    btnRight.onclick = function() {
+        current = (current + 1) % carouselCards.length;
+        updateCarousel();
+    };
+
+    showMoreBtn.onclick = function() {
+        const isCarouselVisible = carouselContainer.style.display !== "none";
+        carouselContainer.style.display = isCarouselVisible ? "none" : "";
+        cardsGrid.style.display = isCarouselVisible ? "grid" : "none";
+        showMoreBtn.textContent = isCarouselVisible ? "Show Less" : "Show More";
+    };
+
+    updateCarousel();
+
+    // AI Help Box toggle
+    function toggleAIHelpBox() {
+        const box = document.getElementById('ai-help-box');
+        box.style.display = (box.style.display === 'none' || box.style.display === '') ? 'block' : 'none';
+    }
+
+    let aiReplyCount = 0;
+
+    function handleAIHelpSend(event) {
+        event.preventDefault();
+        const input = document.getElementById('ai-help-input-field');
+        const tooltip = document.getElementById('ai-help-tooltip');
+        const chatBody = document.getElementById('ai-help-body');
+        const message = input.value.trim();
+
+        if (!message) {
+            tooltip.style.display = 'block';
+            setTimeout(() => { tooltip.style.display = 'none'; }, 3000);
+            input.focus();
+            return false;
+        }
+
+        // Add user's message
+        const userMsg = document.createElement('div');
+        userMsg.className = 'chat-message user';
+        userMsg.innerHTML = `
+  <div>
+    <span class="user-name">You:</span>
+    <span class="user-bubble">${escapeHTML(message)}</span>
+  </div>
+`;
+chatBody.appendChild(userMsg);
+
+        chatBody.scrollTop = chatBody.scrollHeight;
+        input.value = '';
+        tooltip.style.display = 'none';
+
+        // Bot reply logic
+        let botReply = "";
+        aiReplyCount++;
+        if (aiReplyCount === 1) {
+            botReply = "Sorry, but as previously mentioned, this is a mock chatbox.";
+        } else if (aiReplyCount === 2) {
+            botReply = "Sorry, but if you don't know what a mock chatbox is, this is just a placeholder.";
+        } else if (aiReplyCount === 3) {
+            botReply = "Okay, by this point, I don't know if you can't read or you're just testing my patience. This is a mock chatbox.";
+        } else {
+            botReply = "Still a mock chatbox.";
+        }
+
+        setTimeout(() => {
+            const botMsg = document.createElement('div');
+            botMsg.className = 'chat-message bot';
+            botMsg.innerHTML = `
+  <div>
+    <span class="bot-name">Bot:</span>
+    <span class="bot-bubble">${escapeHTML(botReply)}</span>
+  </div>
+`;
+chatBody.appendChild(botMsg);
+            chatBody.scrollTop = chatBody.scrollHeight;
+        }, 600);
+
+        return false;
+    }
+
+    // Utility to escape HTML
+    function escapeHTML(str) {
+        return str.replace(/[&<>"']/g, function(m) {
+            return ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            })[m];
+        });
+    }
+    </script>
+</body>
+</html>

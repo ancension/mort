@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rubenson Morta</title>
+    <link rel="icon" type="image/x-icon" href="src/img/Icon.png">
+    <link rel="stylesheet" href="src/css/mainstyle.css">
+</head>
+<body>
+    <div class="left">
+        <nav>
+            <ul>
+                <li><a class="nav" href="#about">About Me</a></li>
+                <li><a class="nav" href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <img class="gif" src="src/img/bongo-cat-transparent.gif">
+            <div class="sliding-text">Web Developer</div>
+        </div>
+        <h1 class="L1">Rubenson</h1>
+        <h1 class="L2">Morta</h1>
+        <div class="contact">
+            <p id="email">mortathemorta@gmail.com</p>
+            <p id="number">09944500257</p>
+        </div>
+    </div>
+    <div class="right">
+        <div class="crosshatch-bg" id="background"></div>
+        <h2 id="about">About Me</h2>
+        <p>Creative and reliable individual with 7+ years of part-time experience as a writer and 
+editor. Basic front-end development (UI/UX design) and
+back-end knowledge.</p>
+<div id="expandableContent" class="hidden">
+    <p>Experienced in leading small dev teams and directing short 
+    films, showing both technical skills and leadership. Enjoys hands-on projects and 
+    clear communication</p>
+</div>
+<button id="toggleBtn" class="toggle-btn">Show More</button>
+        <h3 id="projects">Web Projects</h3>
+            <ul>
+                <li><h4><a href="src/Real Estate/index.html">Real Estate Website</a></h4></li>
+                <li><h4><a href="src/M&M/index.html"><h4></h4>M&M Cat Insurance Website</a></h4></li>
+                <li><h4><a href="src/Landing Page demo/Index.html">Sample Project Page</a></h4></li>
+                <li><h4><a href="src/Price Range Slider with Min-Max Input/index.html">Price Range Slider with Min and Max Value</a></h4></li>
+                <li><h4><a href="src/Analog Clock/Index.html"><h4></h4>Analog Clock</a></h4></li>
+                <li><h4><a href="src/Task Board/index.html">Task Board</a></h4></li>
+                <li><h4><a href="src/Feedback System/Index.html">PHCCI - Feedback System</a></h4></li>
+            </ul>
+        <h3>School Projects</h3>
+            <ul class="topnav">
+                <li><h4><a href="https://drive.google.com/file/d/1QXtFcm99WJifwjgYyDVd60On0lv-hmOu/view?usp=sharing" target="_blank">Old School Projects</a></h4></li>
+                    <ul><h5>Contains:</h5>
+                        <li>M&M Cat Insurance</li>
+                        <li>Neko (2D Platformer Game)</li>
+                        <li>Random RNG (Random Number Generator)</li>
+                        <li>Line Tracing Robot</li>
+                    </ul>
+            </ul>
+        <h3>App Projects</h2>
+            <ul>
+                <li><h4><a href="https://drive.google.com/file/d/12MJWiOyV5P9SMq8Y8tDKk2iCClnIKV6X/view?usp=sharing" target="_blank">BullKit</a></h4></li>
+                <li><h4><a href="https://docs.google.com/presentation/d/1aLfShba_WfXGy3srXbGByAmbMRGuPmEl_Ixh6BwEOiA/edit#slide=id.g2d96e46cfb8_0_0" target="_blank"><h4>Fast Action Response Technology</a></h4></li>
+            </ul>
+        <h3>Film Projects</h3>
+            <ul style="padding-bottom: 3rem;">
+                <li><h4><a>Kuan, Short Film</a></h4></li>
+                <li><h4><a>Don't Skip Lunch</a></h4></li>
+            </ul>
+        </div>
+
+<script>
+  const bg = document.getElementById("background");
+
+  window.addEventListener("scroll", () => {
+    const scrollOffset = window.scrollY;
+    const parallaxOffset = scrollOffset *0.02;
+    bg.style.transform = `translateY(-${parallaxOffset}px)`;
+  });
+
+  const toggleBtn = document.getElementById("toggleBtn");
+  const expandableContent = document.getElementById("expandableContent");
+
+  toggleBtn.addEventListener("click", () => {
+    expandableContent.classList.toggle("hidden");
+    if (expandableContent.classList.contains("hidden")) {
+      toggleBtn.innerText = "Show More";
+    } else {
+      toggleBtn.innerText = "Show Less";
+    }
+  });
+</script>
+
+
+</body>
+</html>

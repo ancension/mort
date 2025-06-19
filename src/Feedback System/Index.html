@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback System</title>
+    <link rel="stylesheet" href="bootsrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body class="background text-center">
+    <div class="content">
+    <div>
+        
+        <div class="top-bar text-center">
+            <a class="link_main" href="../../Index.html">Back to Main Portfolio</a>
+            <h1>Rate Your Experience!</h1>
+        </div>
+    </div>
+
+    <div style="padding-bottom: 2%;"  class="container mt-8">
+        <div class="mar5 d-flex p-3" style="font-size: medium;">
+            <div class="col text-start">Very Satisfied</div>
+            <div class="col"> </div>
+            <div class="col text-end">Very Unsatisfied</div>
+        </div>
+        <div class="emoji-container d-flex mt-2 p-3">
+            <button onclick="buttonA()" class="btn emoji-button" data-score="very satisfying" data-mainScore="M1"><p class="m-0">
+                <img id="M1" class="emoji-img" style="filter: grayscale(0%); max-width: 70%;" src="img/b1.png" alt="Image Button">
+            </p></button>
+            <button onclick="buttonB()" class="btn emoji-button" data-score="satisfying" data-mainScore="M2"><p class="m-0">
+                <img id="M2" class="emoji-img" style="filter: grayscale(0%); max-width: 70%;" src="img/b2.png" alt="Image Button">
+            </p></button>
+            <button onclick="buttonC()" class="btn emoji-button" data-score="neither satisfying nor unsatisfying" data-mainScore="M3"><p class="m-0">
+                <img id="M3" class="emoji-img" style="filter: grayscale(0%); max-width: 70%;" src="img/b3.png" alt="Image Button">
+            </p></button>
+            <button onclick="buttonD()" class="btn emoji-button" data-score="unsatisfying" data-mainScore="M4"><p class="m-0">
+                <img id="M4" class="emoji-img" style="filter: grayscale(0%); max-width: 70%;" src="img/b4.png" alt="Image Button">
+            </p></button>
+            <button onclick="buttonE()" class="btn emoji-button" data-score="very unsatisfying" data-mainScore="M5"><p class="m-0">
+                <img id="M5" class="emoji-img" style="filter: grayscale(50%); max-width: 70%;" src="img/b5.png" alt="Image Button">
+            </p></button>
+        </div>
+        <p id="mainResult" class="fs-3" style="padding-top: 3rem"></p>
+        <div class="container mt-2" style="padding-bottom: 5rem;">
+            <div class="container">
+                <button class="redirectButton" id="redirectButton" onclick="redirectButtonClicked()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="warningModal" tabindex="-1" aria-labelledby="warningModalLabel" aria-hidden="true">
+        <div class="mar10 modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="warningModalLabel">Warning</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Please select an emoji before submitting.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+
+        const crd_btn = document.querySelectorAll('.emoji-button');
+        const crd_result = document.getElementById('mainResult');       // Main result
+        let selectedScore = false;
+
+        crd_btn.forEach(button => {
+    button.addEventListener('click', () => {
+        const crd_score = button.getAttribute('data-score');
+        crd_result.textContent = `You have rated your experience as ${crd_score}!`;
+        selectedScore = true;
+        const badgeScore = button.getAttribute('data-mainScore');
+    });
+});
+
+
+        let actionPerformed = false;
+
+    function redirectButtonClicked() {
+        if (!actionPerformed) {
+            const warningModal = new bootstrap.Modal(document.getElementById('warningModal'));
+            warningModal.show();
+        } else {window.location.href = 'Page2.html';}
+        }
+
+        function buttonA(){
+            document.getElementById('M1').style.filter = 'grayscale(0%)';
+            document.getElementById('M1').style.scale = '1.4';
+            document.getElementById('M2').style.filter = 'grayscale(80%)';
+            document.getElementById('M2').style.scale = '1';
+            document.getElementById('M3').style.filter = 'grayscale(80%)';
+            document.getElementById('M3').style.scale = '1';
+            document.getElementById('M4').style.filter = 'grayscale(80%)';
+            document.getElementById('M4').style.scale = '1';
+            document.getElementById('M5').style.filter = 'grayscale(80%)';
+            document.getElementById('M5').style.scale = '1';
+            actionPerformed = true;
+        }
+
+        function buttonB(){
+            document.getElementById('M1').style.filter = 'grayscale(80%)';
+            document.getElementById('M1').style.scale = '1';
+            document.getElementById('M2').style.filter = 'grayscale(0%)';
+            document.getElementById('M2').style.scale = '1.4';
+            document.getElementById('M3').style.filter = 'grayscale(80%)';
+            document.getElementById('M3').style.scale = '1';
+            document.getElementById('M4').style.filter = 'grayscale(80%)';
+            document.getElementById('M4').style.scale = '1';
+            document.getElementById('M5').style.filter = 'grayscale(80%)';
+            document.getElementById('M5').style.scale = '1';
+            actionPerformed = true;
+        }
+
+        function buttonC(){
+            document.getElementById('M1').style.filter = 'grayscale(80%)';
+            document.getElementById('M1').style.scale = '1';
+            document.getElementById('M2').style.filter = 'grayscale(80%)';
+            document.getElementById('M2').style.scale = '1';
+            document.getElementById('M3').style.filter = 'grayscale(0%)';
+            document.getElementById('M3').style.scale = '1.4';
+            document.getElementById('M4').style.filter = 'grayscale(80%)';
+            document.getElementById('M4').style.scale = '1';
+            document.getElementById('M5').style.filter = 'grayscale(80%)';
+            document.getElementById('M5').style.scale = '1';
+            actionPerformed = true;
+        }
+
+        function buttonD(){
+            document.getElementById('M1').style.filter = 'grayscale(80%)';
+            document.getElementById('M1').style.scale = '1';
+            document.getElementById('M2').style.filter = 'grayscale(80%)';
+            document.getElementById('M2').style.scale = '1';
+            document.getElementById('M3').style.filter = 'grayscale(80%)';
+            document.getElementById('M3').style.scale = '1';
+            document.getElementById('M4').style.filter = 'grayscale(0%)';
+            document.getElementById('M4').style.scale = '1.4';
+            document.getElementById('M5').style.filter = 'grayscale(80%)';
+            document.getElementById('M5').style.scale = '1';
+            actionPerformed = true;
+        }
+
+        function buttonE(){
+            document.getElementById('M1').style.filter = 'grayscale(80%)';
+            document.getElementById('M1').style.scale = '1';
+            document.getElementById('M2').style.filter = 'grayscale(80%)';
+            document.getElementById('M2').style.scale = '1';
+            document.getElementById('M3').style.filter = 'grayscale(80%)';
+            document.getElementById('M3').style.scale = '1';
+            document.getElementById('M4').style.filter = 'grayscale(80%)';
+            document.getElementById('M4').style.scale = '1';
+            document.getElementById('M5').style.filter = 'grayscale(0%)';
+            document.getElementById('M5').style.scale = '1.4';
+            actionPerformed = true;
+        }
+    </script>
+
+<footer class="sub-bottom_2">
+    <p class="text-end" style="font: x-small" >©OJT 2024</p>
+</footer>
+
+</body>
+</html>

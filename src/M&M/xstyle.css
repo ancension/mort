@@ -1,0 +1,332 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+body {
+	background-color: #edf0f1;
+}
+
+li, a, button {
+	font-weight: 500;
+	font-size: 18px;
+	color: #edf0f1;
+	text-decoration: none;
+	font-family: arial;
+}
+
+header {
+	top: 0;
+	width: 100%;
+	position: fixed;
+	float: top;
+	background-color: #24252a;
+	padding: 3%;
+}
+
+.link_main{
+	color: rgb(228, 223, 212);
+	top: 0;
+	padding: .5rem;
+	border: block;
+	background-color:rgb(189, 101, 101);
+	border-radius: 13px;
+	border-width: 3px;
+}
+
+.link_main:hover{
+    color: #c7c7c7;
+    background-color: black;
+}
+
+.logo{
+	cursor: pointer;
+	
+}
+
+.company {
+	height: 90px;
+	width: 160px;
+}
+
+.top {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: row;
+	width: 100%;
+	height: 4%;
+	margin-right: 0 10% 0 10%;
+}
+
+.navbar{
+	list-style: none;
+}
+
+.navbar li {
+	display: inline-block;
+	padding: 0px 10px;
+}
+
+.navbar li a {
+	margin-right: auto;
+	margin-left: auto;
+	transition: all 0.3s ease 0s;
+}
+
+.navbar li a:hover {
+	color: #0088a9;
+}
+
+button {
+	display: block;
+	float: right;
+	padding: 9px 25px;
+	background-color: rgba(0,136,169,1);
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	transition: all 0.3s ease 0s;
+	margin-left: auto;
+	margin-top: 3%;
+}
+
+button:hover {
+	background-color: rgba(0,136,169,0.5);
+}
+
+.service-area {
+	display: flex;
+	font-family: arial;
+	background-color: rgba(0,136,169,1);
+	color: white;
+}
+
+.contact-area {
+	display: flex;
+	font-family: Verdana, sans-serif;
+	padding-top: 50px;
+	margin: 0;
+}
+
+.contacts {
+	padding-top: 25px;
+	font-family: arial;
+	margin-left: 15%;
+}
+
+h1 {font-size: 50px;}
+
+h1, h2 {
+	padding-bottom: 20px;
+}
+
+.text-part {
+	text-align: justify;
+	margin-left: 15%;
+	margin-bottom: 10%;
+	margin-right: 10%;
+}
+
+p {
+	line-height: 30px;
+}
+
+.text-area {
+	font-size: 24px;
+	text-align: justified;
+}
+
+
+
+
+
+
+.banner-area {
+	text-align: center;
+	font-family: gothic-bold;
+	margin-top: 20%;
+	margin-bottom: 20%;
+	background-image: url(img/smol.gif);
+	width: 100%;
+	height: auto;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	font-size: 30px;
+	color: black;
+	}
+
+
+.blurr {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	border: hidden 1px;
+	margin: 0 25% 0 25%;
+	background-color: rgb(21, 43, 43,0.7);
+	border-radius: 3%;
+	min-height: 10rem;
+	padding: 2rem;
+}
+
+.three {
+	color: #00d9ff;
+	font-size: 50px;	
+}
+
+.five {
+	font-size: 30px;
+	color: #edf0f1;
+	padding-bottom: 2rem;
+}
+
+
+
+
+
+
+.full {
+	display: block;
+}
+
+.left {
+	cursor: pointer;
+	float: left;
+	width: 40%;
+	height: 35vh;
+	padding: 10px;
+	margin-bottom: 80px;
+	margin-left: 8%;
+	margin-right: auto;
+}
+
+.right {
+	cursor: pointer;
+	float: right;
+	width: 40%;
+	height: 35vh;
+	padding: 10px;
+	margin-bottom: 80px;
+	margin-right: 8%;
+	margin-left: auto;
+}
+
+.left:hover {
+	border: solid 10px rgba(0,136,169,0.8);
+}
+
+.right:hover {
+	border: solid 10px rgba(0,136,169,0.8);
+}
+
+.min {
+	display: none;
+	width: 100%;
+	height: 600;
+}
+
+
+
+@media (max-width: 970px) {
+	
+	.blurr {
+		padding: 30px;
+	}
+	
+	.three {
+		font-size: 45px;
+	}
+	
+	.five {
+		font-size: 30px;
+		padding-bottom: 0;
+	}
+	
+	.left {
+		width: 40%;
+		height: 20vh;
+		color: #e9bb77;
+	}
+	.right {
+		width: 40%;
+		height: 20vh;
+	}
+
+}
+
+@media (max-width: 500px) {
+	
+	.full {
+		display: none;
+	}
+	
+	.min {
+		display: block;
+	}
+	
+	.con {
+		padding-left: 30px;
+		padding-right: 30px;
+		align-items: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5%;
+		width: 100%;
+		height: 40vh;
+	}
+	
+	.navbar {
+		display: flex;
+		text-align: center;
+	}
+	
+	.logo {
+		height: 45px;
+		width: 45px;
+	}
+	
+	.company {
+		height: 45px;
+		width: auto;
+	}
+	
+	li, a, button {
+		font-size: 12px;
+	}
+	
+	p {
+		font-size: 12px;
+	}
+	
+	h1 {
+		font-size: 20px;
+	}
+	
+	h2 {
+		font-size: 18px;
+	}
+
+}
+
+@media (max-width: 400px) {
+		.con {
+		margin-left: 15%;
+		margin-right: 15%;
+		padding: 0;
+		pointer: cursor;
+		width: 70%;
+		height: 20vh;
+	}
+
+	.con:hover {
+		border: solid 10px rgba(0,136,169,0.8);
+	}
+
+}

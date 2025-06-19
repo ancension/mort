@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Scoring</title>
+    <link rel="stylesheet" href="bootsrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="background text-center">
+    <div  class="container mt-8 text-center" style="padding-top: 3rem; padding-bottom: 2rem;">
+        <h1 class="">Tap on the Badges</h1>
+
+<!--BADGE CONTAINER-->
+        <div class="badgeContainer">
+
+<!--BADGE 1-->
+<div id="badge1" class="container shadow-lg badgeExternal" data-bs-toggle="collapse" data-bs-target="#card1"> 
+    <div class="badgeInternal container">
+        <div class="col mx-2 mt-2">
+            <button class="badge-button" type="button" class="btn btn-light">
+                <img src="img/security.png" alt="Security" data-bs-toggle="collapse" data-bs-target="#card1" class="img-fluid badge-icon">
+            </button>
+        </div>
+        <div>
+            <h1 data-bs-toggle="collapse" data-bs-target="#card1">Security</h1>
+            <h6 data-bs-toggle="collapse" data-bs-target="#card1">Guardians Who Care</h6>
+        </div>
+        <!--Collapse-->
+        <div id="card1" class="collapse mb-2 mt-2">
+            <div class="mar5 mt-4 d-flex" style="font-size: x-small;">
+                <div class="col">Very Satisfied</div>
+                <div class="col"> </div>
+                <div class="col">Very Unsatisfied</div>
+            </div>
+            <div class="emoji-container d-flex mt-2 p-3">
+                <button onclick="badgeA1()" class="btn card-1-button" data-score="very satisfying" data-badgeScore1="A1"><p class="m-0">
+                    <img class = "emoji-img" id="A1" style="filter: grayscale(35%); max-width: 120%;" src="img/b1.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeA2()" class="btn card-1-button" data-score="satisfying" data-badgeScore1="A2"><p class="m-0">
+                    <img class = "emoji-img" id="A2" style="filter: grayscale(35%); max-width: 120%;" src="img/b2.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeA3()" class="btn card-1-button" data-score="neither satisfying nor unsatisfying" data-badgeScore1="A3"><p class="m-0">
+                    <img class = "emoji-img" id="A3" style="filter: grayscale(35%); max-width: 120%;" src="img/b3.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeA4()" class="btn card-1-button" data-score="unsatisfying" data-badgeScore1="A4"><p class="m-0">
+                    <img class = "emoji-img" id="A4" style="filter: grayscale(35%); max-width: 120%;" src="img/b4.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeA5()" class="btn card-1-button" data-score="very unsatisfying" data-badgeScore1="A5"><p class="m-0">
+                    <img class = "emoji-img" id="A5" style="filter: grayscale(35%); max-width: 120%;" src="img/b5.png" alt="Image Button">
+                </p></button>
+            </div>
+        </div>
+        <p id="crd-1-result" class="ms-3 mb-3 me-3"></p>        
+    </div>
+</div>
+
+<!--BADGE 2-->
+<div id="badge2" class="container shadow-lg badgeExternal" data-bs-toggle="collapse" data-bs-target="#card2">
+    <div class="badgeInternal container">
+        <div class="col mx-2 mt-2">
+            <button class="badge-button" type="button" class="btn btn-light">
+                <img src="img/satisfy.png" alt="Service" data-bs-toggle="collapse" data-bs-target="#card2" class="img-fluid badge-icon">
+            </button>
+        </div>
+        <div>
+            <h1 data-bs-toggle="collapse" data-bs-target="#card2">Service</h1>
+            <h6 data-bs-toggle="collapse" data-bs-target="#card2">Service That Speaks</h6>
+        </div>
+        <!--Collapse-->
+        <div id="card2" class="collapse mb-2 mt-2">
+            <div class="mar5 mt-4 d-flex" style="font-size: x-small;">
+                <div class="col">Very Satisfied</div>
+                <div class="col"> </div>
+                <div class="col">Very Unsatisfied</div>
+            </div>
+            <div class="emoji-container d-flex mt-2 p-3">
+                <button onclick="badgeB1()" class="btn card-2-button" data-score="very satisfying" data-badgeScore2="B1"><p class="m-0">
+                    <img class = "emoji-img" id="B1" style="filter: grayscale(35%); max-width: 120%;" src="img/b1.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeB2()" class="btn card-2-button" data-score="satisfying" data-badgeScore2="B2"><p class="m-0">
+                    <img class = "emoji-img" id="B2" style="filter: grayscale(35%); max-width: 120%;" src="img/b2.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeB3()" class="btn card-2-button" data-score="neither satisfying nor unsatisfying" data-badgeScore2="B3"><p class="m-0">
+                    <img class = "emoji-img" id="B3" style="filter: grayscale(35%); max-width: 120%;" src="img/b3.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeB4()" class="btn card-2-button" data-score="unsatisfying" data-badgeScore2="B4"><p class="m-0">
+                    <img class = "emoji-img" id="B4" style="filter: grayscale(35%); max-width: 120%;" src="img/b4.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeB5()" class="btn card-2-button" data-score="very unsatisfying" data-badgeScore2="B5"><p class="m-0">
+                    <img class = "emoji-img" id="B5" style="filter: grayscale(35%); max-width: 120%;" src="img/b5.png" alt="Image Button">
+                </p></button>
+            </div>
+        </div>
+        <p id="crd-2-result" class="ms-3 mb-3 me-3"></p>        
+    </div>
+</div>
+
+<!--BADGE 3-->
+<div id="badge3" class="container shadow-lg badgeExternal" data-bs-toggle="collapse" data-bs-target="#card3">
+    <div class="badgeInternal container">
+        <div class="col mx-2 mt-2">
+            <button class="badge-button" type="button" class="btn btn-light">
+                <img src="img/comfort.png" alt="comfort" data-bs-toggle="collapse" data-bs-target="#card3" class="img-fluid badge-icon">
+            </button>
+        </div>
+        <div>
+            <h1 data-bs-toggle="collapse" data-bs-target="#card3">Comfortability</h1>
+            <h6 data-bs-toggle="collapse" data-bs-target="#card3">Quailty Space Happy Face</h6>
+        </div>
+        <!--Collapse-->
+        <div id="card3" class="collapse mb-2 mt-2">
+            <div class="mar5 mt-4 d-flex" style="font-size: x-small;">
+                <div class="col">Very Satisfied</div>
+                <div class="col"> </div>
+                <div class="col">Very Unsatisfied</div>
+            </div>
+            <div class="emoji-container d-flex mt-2 p-3">
+                <button onclick="badgeC1()" class="btn card-3-button" data-score="very satisfying" data-badgeScore3="C1"><p class="m-0">
+                    <img class = "emoji-img" id="C1" style="filter: grayscale(35%); max-width: 120%;" src="img/b1.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeC2()" class="btn card-3-button" data-score="satisfying" data-badgeScore3="C2"><p class="m-0">
+                    <img class = "emoji-img" id="C2" style="filter: grayscale(35%); max-width: 120%;" src="img/b2.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeC3()" class="btn card-3-button" data-score="neither satisfying nor unsatisfying" data-badgeScore3="C3"><p class="m-0">
+                    <img class = "emoji-img" id="C3" style="filter: grayscale(35%); max-width: 120%;" src="img/b3.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeC4()" class="btn card-3-button" data-score="unsatisfying" data-badgeScore3="C4"><p class="m-0">
+                    <img class = "emoji-img" id="C4" style="filter: grayscale(35%); max-width: 120%;" src="img/b4.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeC5()" class="btn card-3-button" data-score="very unsatisfying" data-badgeScore3="C5"><p class="m-0">
+                    <img class = "emoji-img" id="C5" style="filter: grayscale(35%); max-width: 120%;" src="img/b5.png" alt="Image Button">
+                </p></button>
+            </div>
+        </div>
+        <p id="crd-3-result" class="ms-3 mb-3 me-3"></p>        
+    </div>
+</div>
+
+<!--BADGE 4-->
+<div id="badge4" class="container shadow-lg badgeExternal" data-bs-toggle="collapse" data-bs-target="#card4">
+    <div class="badgeInternal container">
+        <div class="col mx-2 mt-2">
+            <button class="badge-button" type="button" class="btn btn-light">
+                <img src="img/sanitize.png" alt="comfort" data-bs-toggle="collapse" data-bs-target="#card4" class="img-fluid badge-icon">
+            </button>
+        </div>
+        <div>
+            <h1 data-bs-toggle="collapse" data-bs-target="#card4">Sanitation</h1>
+            <h6 data-bs-toggle="collapse" data-bs-target="#card4">Satisfaction in Every Corner</h6>
+        </div>
+        <!--Collapse-->
+        <div id="card4" class="collapse mb-2 mt-2">
+            <div class="mar5 mt-4 d-flex" style="font-size: x-small;">
+                <div class="col">Very Satisfied</div>
+                <div class="col"> </div>
+                <div class="col">Very Unsatisfied</div>
+            </div>
+            <div class="emoji-container d-flex mt-2 p-3">
+                <button onclick="badgeD1()" class="btn card-4-button" data-score="very satisfying" data-badgeScore4="D1"><p class="m-0">
+                    <img class = "emoji-img" id="D1" style="filter: grayscale(35%); max-width: 120%;" src="img/b1.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeD2()" class="btn card-4-button" data-score="satisfying" data-badgeScore4="D2"><p class="m-0">
+                    <img class = "emoji-img" id="D2" style="filter: grayscale(35%); max-width: 120%;" src="img/b2.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeD3()" class="btn card-4-button" data-score="neither satisfying nor unsatisfying" data-badgeScore4="D3"><p class="m-0">
+                    <img class = "emoji-img" id="D3" style="filter: grayscale(35%); max-width: 120%;" src="img/b3.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeD4()" class="btn card-4-button" data-score="unsatisfying" data-badgeScore4="D4"><p class="m-0">
+                    <img class = "emoji-img" id="D4" style="filter: grayscale(35%); max-width: 120%;" src="img/b4.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeD5()" class="btn card-4-button" data-score="very unsatisfying" data-badgeScore4="D5"><p class="m-0">
+                    <img class = "emoji-img" id="D5" style="filter: grayscale(35%); max-width: 120%;" src="img/b5.png" alt="Image Button">
+                </p></button>
+            </div>
+        </div>
+        <p id="crd-4-result" class="ms-3 mb-3 me-3"></p>        
+    </div>
+</div>
+
+<!--BADGE 5-->
+<div id="badge5" class="container shadow-lg badgeExternal" data-bs-toggle="collapse" data-bs-target="#card5">
+    <div class="badgeInternal container">
+        <div class="col mx-2 mt-2">
+            <button class="badge-button" type="button" class="btn btn-light">
+                <img src="img/speed.png" alt="comfort" data-bs-toggle="collapse" data-bs-target="#card5" class="img-fluid badge-icon">
+            </button>
+        </div>
+        <div>
+            <h1 data-bs-toggle="collapse" data-bs-target="#card5">Transaction Speed</h1>
+            <h6 data-bs-toggle="collapse" data-bs-target="#card5">Your Time Matters</h6>
+        </div>
+        <!--Collapse-->
+        <div id="card5" class="collapse mb-2 mt-2">
+            <div class="mar5 mt-4 d-flex" style="font-size: x-small;">
+                <div class="col">Very Satisfied</div>
+                <div class="col"> </div>
+                <div class="col">Very Unsatisfied</div>
+            </div>
+            <div class="emoji-container d-flex mt-2 p-3">
+                <button onclick="badgeE1()" class="btn card-5-button" data-score="very satisfying" data-badgeScore5="E1"><p class="m-0">
+                    <img class = "emoji-img" id="E1" style="filter: grayscale(35%); max-width: 120%;" src="img/b1.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeE2()" class="btn card-5-button" data-score="satisfying" data-badgeScore5="E2"><p class="m-0">
+                    <img class="emoji-img" id="E2" style="filter: grayscale(35%); max-width: 120%;" src="img/b2.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeE3()" class="btn card-5-button" data-score="neither satisfying nor unsatisfying" data-badgeScore5="E3"><p class="m-0">
+                    <img class = "emoji-img" id="E3" style="filter: grayscale(35%); max-width: 120%;" src="img/b3.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeE4()" class="btn card-5-button" data-score="unsatisfying" data-badgeScore5="E4"><p class="m-0">
+                    <img class = "emoji-img" id="E4" style="filter: grayscale(35%); max-width: 120%;" src="img/b4.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeE5()" class="btn card-5-button" data-score="very unsatisfying" data-badgeScore5="E5"><p class="m-0">
+                    <img class = "emoji-img" id="E5" style="filter: grayscale(35%); max-width: 120%;" src="img/b5.png" alt="Image Button">
+                </p></button>
+            </div>
+        </div>
+        <p id="crd-5-result" class="ms-3 mb-3 me-3"></p>        
+    </div>
+</div>
+
+<!--BADGE 6-->
+<div id="badge6" class="container shadow-lg badgeExternal" data-bs-toggle="collapse" data-bs-target="#card6">
+    <div class="badgeInternal container">
+        <div class="col mx-2 mt-2">
+            <button class="badge-button" type="button" class="btn btn-light">
+                <img src="img/tech.png" alt="comfort" data-bs-toggle="collapse" data-bs-target="#card6" class="img-fluid badge-icon">
+            </button>
+        </div>
+        <div>
+            <h1 data-bs-toggle="collapse" data-bs-target="#card6">Technology</h1>
+            <h6 data-bs-toggle="collapse" data-bs-target="#card6">Leading With Technology</h6>
+        </div>
+        <!--Collapse-->
+        <div id="card6" class="collapse mb-2 mt-2">
+            <div class="mar5 mt-4 d-flex" style="font-size: x-small;">
+                <div class="col">Very Satisfied</div>
+                <div class="col"> </div>
+                <div class="col">Very Unsatisfied</div>
+            </div>
+            <div class="emoji-container d-flex mt-2 p-3">
+                <button onclick="badgeF1()" class="btn card-6-button" data-score="very satisfying" data-badgeScore6="F1"><p class="m-0">
+                    <img class = "emoji-img" id="F1" style="filter: grayscale(35%); max-width: 120%;" src="img/b1.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeF2()" class="btn card-6-button" data-score="satisfying" data-badgeScore6="F2"><p class="m-0">
+                    <img class = "emoji-img" id="F2" style="filter: grayscale(35%); max-width: 120%;" src="img/b2.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeF3()" class="btn card-6-button" data-score="neither satisfying nor unsatisfying" data-badgeScore6="F3"><p class="m-0">
+                    <img class = "emoji-img" id="F3" style="filter: grayscale(35%); max-width: 120%;" src="img/b3.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeF4()" class="btn card-6-button" data-score="unsatisfying" data-badgeScore6="F4"><p class="m-0">
+                    <img class = "emoji-img" id="F4" style="filter: grayscale(35%); max-width: 120%;" src="img/b4.png" alt="Image Button">
+                </p></button>
+                <button onclick="badgeF5()" class="btn card-6-button" data-score="very unsatisfying" data-badgeScore6="F5"><p class="m-0">
+                    <img class = "emoji-img" id="F5" style="filter: grayscale(35%); max-width: 120%;" src="img/b5.png" alt="Image Button">
+                </p></button>
+            </div>
+        </div>
+        <p id="crd-6-result" class="ms-3 mb-3 me-3"></p>        
+    </div>
+</div>
+
+<!--BADGE CONTAINER END-->
+</div>    
+
+<!--SUBMIT BUTTON-->
+        <div class="sub-bottom shadow">
+            <button class="redirectButton shadow" id="redirectButton2" onclick="window.location.href = 'Page3.html';">Submit</button>
+        </div>
+<!--MAIN CONTANIER END-->
+    </div>
+
+
+
+    <script src="bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+
+<footer>
+    <p class="text-end m-3" style="font: x-small" >©OJT 2024</p>
+</footer>
+
+</body>
+
+</html>
+
+
